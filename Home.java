@@ -46,6 +46,7 @@ public class Home {
 
         //storage of tomorrow's humidity level
         String tomorrowHumidity = driver.findElement(By.xpath("//*[@id=\"" + dateFormat.format(nextDayDate) + "\"]/table/tbody/tr[15]/td[1]/span")).getAttribute("data-value");
+        driver.findElement(By.className("humidity")).getAttribute("data-value");
         System.out.println("Tomrrow date is : " + (dateFormat.format(nextDayDate)));
         System.out.println("Tomorrow Humidity Percentage in "+city+" is = " + tomorrowHumidity);
 
